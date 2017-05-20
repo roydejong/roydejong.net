@@ -13,5 +13,10 @@
             "email": "roy@softwarepunt.nl"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "roydejong\\dotnet\\": "src/"
+        }
+    }
 }
