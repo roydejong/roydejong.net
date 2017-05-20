@@ -3,6 +3,7 @@
 namespace roydejong\dotnet\Generation;
 use roydejong\dotnet\Integration\GeoDecoder;
 use roydejong\dotnet\Integration\Instagram;
+use roydejong\dotnet\Integration\Lastfm;
 use roydejong\dotnet\Site\SiteConfig;
 
 /**
@@ -48,6 +49,18 @@ class HomepageGenerator extends PageGenerator
                     $this->setValue("stalker_location_coordinates", $lastCoords);
                     $this->setValue("stalker_location_text", "{$decoded->locality}, {$decoded->country}");
                 }
+            }
+        }
+
+        // Lastfm integration for last song
+        if ($config->lastfmEnabled) {
+            $lastfmClient = new Lastfm($config);
+
+            $lastTrack = $lastfmClient->getLastPlayedSong();
+
+            if ($lastTrack) {
+                $this->setValue("stalker_music_enabled", true);
+                $this->setValue("stalker_music_track", $lastTrack);
             }
         }
 

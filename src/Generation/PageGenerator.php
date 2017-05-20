@@ -3,6 +3,7 @@
 namespace roydejong\dotnet\Generation;
 
 use Enlighten\Http\Request;
+use roydejong\dotnet\Generation\Filters\TimeAgoFilter;
 
 /**
  * Base class for all static page generators.
@@ -116,6 +117,9 @@ abstract class PageGenerator extends PageContext
         ];
 
         $twig = new \Twig_Environment($twigLoader, $twigOptions);
+
+        $twig->addFilter(new TimeAgoFilter('timeago'));
+
         return $twig->render($this->getTemplateName(), $this->getContextData());
     }
 

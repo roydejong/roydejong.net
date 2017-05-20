@@ -32,6 +32,10 @@ class SiteConfig
     public $instagramClientId;
     public $instagramClientSecret;
 
+    public $lastfmEnabled;
+    public $lastfmApiKey;
+    public $lastfmUsername;
+
     /**
      * SiteConfig constructor.
      */
