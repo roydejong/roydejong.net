@@ -52,7 +52,7 @@
                             <i class="factoid__icon">🎮</i>
                             <strong class="factoid__label">
                                 {{ stalker_game_info.playingNow ? 'Now playing' : 'Last played' }} {{ stalker_game_info.name }}
-                                <span class="factoid__extra">{% if stalker_game_info.playingNow %}Now playing on Steam{% else %}Most recently played game on Steam{% endif %}</span>
+                                <span class="factoid__extra">{% if stalker_game_info.playingNow %}Now playing{% else %}Most recently played game{% endif %} on <a href="http://steamcommunity.com/id/meth0d_/" target="_blank">Steam</a></span>
                             </strong>
                         </div>
                     {% endif %}
