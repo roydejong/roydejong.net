@@ -1,0 +1,17 @@
+{
+    "name": "roydejong/dotnet",
+    "description": "Personal website, roydejong.net",
+    "type": "project",
+    "require": {
+        "twig/twig": "^2.3",
+        "enlighten/framework": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roy de Jong",
+            "email": "roy@softwarepunt.nl"
+        }
+    ],
+    "minimum-stability": "dev"
+}
