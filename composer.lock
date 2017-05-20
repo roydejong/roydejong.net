@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "769ca5952b192ce58c02556946c764da",
+    "content-hash": "ea9948894f05c499653374198285a43f",
     "packages": [
+        {
+            "name": "cosenary/instagram",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cosenary/Instagram-PHP-API.git",
+                "reference": "6ba37197600bccd4389c7bad8dffe3379a5afc01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/6ba37197600bccd4389c7bad8dffe3379a5afc01",
+                "reference": "6ba37197600bccd4389c7bad8dffe3379a5afc01",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MetzWeb\\Instagram\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Metz",
+                    "email": "christian-metz1@gmx.net",
+                    "homepage": "http://metzweb.net"
+                }
+            ],
+            "description": "An easy-to-use PHP Class for accessing Instagram's API.",
+            "homepage": "https://github.com/cosenary/Instagram-PHP-API",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "time": "2015-11-22 11:16:51"
+        },
         {
             "name": "enlighten/framework",
             "version": "dev-master",
@@ -180,7 +228,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "enlighten/framework": 20
+        "enlighten/framework": 20,
+        "cosenary/instagram": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

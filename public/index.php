@@ -4,7 +4,10 @@ use Enlighten\Enlighten;
 use Enlighten\Http\Request;
 
 use Enlighten\Http\Response;
+use Enlighten\Http\ResponseCode;
 use roydejong\dotnet\Generation\HomepageGenerator;
+use roydejong\dotnet\Integration\Instagram;
+use roydejong\dotnet\Site\SiteConfig;
 use roydejong\dotnet\Site\SiteEngine;
 
 require_once "../vendor/autoload.php";
@@ -21,10 +24,26 @@ function getEnableDebugMode(): bool {
 
 define('DEBUG_ENABLED', getEnableDebugMode());
 
+require_once PATH_PROJECT . "/config/config.php";
+
 $app = new Enlighten();
 
+// Route: Homepage
 $app->get('/', function (Request $request): Response {
     return SiteEngine::fire(new HomepageGenerator(), $request);
+});
+
+// Route: Callback for Instagram OAuth
+$app->get('/external/ig_callback', function (Request $request, Response $response) {
+    $ig = new Instagram(SiteConfig::instance());
+
+    if ($ig->handleOAuthCode($request->getQueryParam('code', ''))) {
+        $response->setResponseCode(ResponseCode::HTTP_OK);
+        $response->setBody('OK');
+    } else {
+        $response->setResponseCode(ResponseCode::HTTP_BAD_REQUEST);
+        $response->setBody('NOT_OK');
+    }
 });
 
 $app->start();

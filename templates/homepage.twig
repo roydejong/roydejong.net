@@ -27,37 +27,15 @@
                     <h1 class="stalker__title">Stalker vision</h1>
                     <p class="stalker__explain">Using the magic of web APIs and excessive 21st century oversharing, I can tell you a lot of things about myself - completely automatically.</p>
 
-                    <div class="factoid factoid--gps">
-                        <i class="factoid__icon">🌍</i>
-                        <strong class="factoid__label">
-                            Last seen near Dirksland, Netherlands.
-                            <span class="factoid__extra">That's where I took <a href="https://www.instagram.com/ryjng/" target="_blank">a pretty picture</a></span>
-                        </strong>
-                    </div>
-
-                    <div class="factoid factoid--music">
-                        <i class="factoid__icon">🔊</i>
-                        <strong class="factoid__label">
-                            Listened to Fuck Yo Momma - The Steady Song.
-                            <span class="factoid__extra">About 3 hours ago on Spotify</span>
-                        </strong>
-                    </div>
-
-                    <div class="factoid factoid--music">
-                        <i class="factoid__icon">🎮</i>
-                        <strong class="factoid__label">
-                            I played Prey.
-                            <span class="factoid__extra">About 20 hours ago on Steam</span>
-                        </strong>
-                    </div>
-
-                    <div class="factoid factoid--music">
-                        <i class="factoid__icon">🛌</i>
-                        <strong class="factoid__label">
-                            I slept 7 hours and 14 minutes last night.
-                            <span class="factoid__extra">About 5 hours ago according to Fitbit</span>
-                        </strong>
-                    </div>
+                    {% if stalker_location_enabled %}
+                        <div class="factoid factoid--gps">
+                            <i class="factoid__icon">🌍</i>
+                            <strong class="factoid__label">
+                                Last seen near {{ stalker_location_coordinates }}.
+                                <span class="factoid__extra">That's where I took <a href="https://www.instagram.com/ryjng/" target="_blank">a pretty picture</a></span>
+                            </strong>
+                        </div>
+                    {% endif %}
 
                 </div>
             </div>

@@ -112,8 +112,7 @@ abstract class PageGenerator extends PageContext
 
         $twigOptions = [
             'debug' => DEBUG_ENABLED,
-            'auto_reload' => DEBUG_ENABLED,
-            'cache' => PATH_COMPILATION . "/templates"
+            'cache' => DEBUG_ENABLED ? false : (PATH_COMPILATION . "/templates")
         ];
 
         $twig = new \Twig_Environment($twigLoader, $twigOptions);

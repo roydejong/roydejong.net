@@ -4,7 +4,8 @@
     "type": "project",
     "require": {
         "twig/twig": "^2.3",
-        "enlighten/framework": "dev-master"
+        "enlighten/framework": "dev-master",
+        "cosenary/instagram": "^2.4@dev"
     },
     "license": "MIT",
     "authors": [
