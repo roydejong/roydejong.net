@@ -1,5 +1,66 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <h1>Hi, I'm Roy.</h1>
+    <div class="site-card">
+        <div class="landing">
+            <div class="landing__overlay site-card__inner site-card__inner--intro">
+                <div class="container">
+
+                    <div class="intro">
+                        <h1 class="intro__title">Hi. I'm Roy de Jong.</h1>
+                        <p class="intro__text intro__text--primary">I'm an entrepreneur and all-round software developer from The Netherlands. I run <a href="https://www.softwarepunt.com" target="_blank">Software Punt</a>, where I get to build cool stuff.</p>
+                        <p class="intro__text intro__text--secondary">I love learning new things and I'm always juggling way too many side projects, which I rarely finish. That's the kind of hot stuff that will no doubt end up on this site. 🔥</p>
+
+                        <a class="button button--intro button--spaced" href="mailto:hi@roydejong.net" title="Get in touch with me">Say hi</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-card">
+        <div class="stalker">
+            <div class="stalker__content site-card__inner">
+                <div class="container">
+
+                    <h1 class="stalker__title">Stalker vision</h1>
+                    <p class="stalker__explain">Using the magic of web APIs and excessive 21st century oversharing, I can tell you a lot of things about myself - completely automatically.</p>
+
+                    <div class="factoid factoid--gps">
+                        <i class="factoid__icon">🌍</i>
+                        <strong class="factoid__label">
+                            Last seen near Dirksland, Netherlands.
+                            <span class="factoid__extra">That's where I took <a href="https://www.instagram.com/ryjng/" target="_blank">a pretty picture</a></span>
+                        </strong>
+                    </div>
+
+                    <div class="factoid factoid--music">
+                        <i class="factoid__icon">🔊</i>
+                        <strong class="factoid__label">
+                            Listened to Fuck Yo Momma - The Steady Song.
+                            <span class="factoid__extra">About 3 hours ago on Spotify</span>
+                        </strong>
+                    </div>
+
+                    <div class="factoid factoid--music">
+                        <i class="factoid__icon">🎮</i>
+                        <strong class="factoid__label">
+                            I played Prey.
+                            <span class="factoid__extra">About 20 hours ago on Steam</span>
+                        </strong>
+                    </div>
+
+                    <div class="factoid factoid--music">
+                        <i class="factoid__icon">🛌</i>
+                        <strong class="factoid__label">
+                            I slept 7 hours and 14 minutes last night.
+                            <span class="factoid__extra">About 5 hours ago according to Fitbit</span>
+                        </strong>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

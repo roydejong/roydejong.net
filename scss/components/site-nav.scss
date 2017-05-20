@@ -1,0 +1,87 @@
+// --- Nav ---
+$zIndexNav: 500;
+$zIndexNavOerlay: 501;
+$zIndexNavContent: 502;
+
+.navi {
+  background: #141f29;
+  color: #fff;
+  height: 9rem;
+  vertical-align: middle;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $zIndexNav;
+}
+.navi__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent url('/static/images/pattern_gtf.png') repeat;
+  opacity: .25;
+  z-index: $zIndexNavOerlay;
+}
+.navi__content {
+  position: relative;
+  z-index: $zIndexNavContent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 9rem;
+}
+.nav__left {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.nav__right {
+  text-align: right;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+// --- Brand mark thing in header ---
+.brandmark {
+  display: inline-block;
+  border: 3px solid #fff;
+  color: #fff;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  line-height: calc(6rem - (3px * 2));
+  font-size: 2.25rem;
+  font-weight: $fontWeightBodyBold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+// --- Nav links ---
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-links__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.75rem;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-left: 2.5rem;
+  font-weight: $fontWeightBodyBold;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.nav-links__link:hover, .nav-links__link--active {
+  background: rgba(0, 0, 0, 0.333);
+}

@@ -1,0 +1,40 @@
+// --- Typography ---
+@import url('https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro:400,600');
+
+$fontFamilyTitle: 'Bitter', serif;
+$fontFamilyBody: 'Source Sans Pro', sans-serif;
+
+$fontWeightTitleReg: 400;
+$fontWeightBodyReg: 400;
+$fontWeightBodyBold: 600;
+
+html, body {
+  text-rendering: optimizeLegibility;
+}
+html {
+  font-size: 10px; // 1rem = 10px = useful
+}
+body {
+  font-size: 1.4rem; // 14px default font size on regular size
+  font-family: $fontFamilyBody;
+  font-weight: $fontWeightBodyReg;
+}
+h1, h2 {
+  font-family: $fontFamilyTitle;
+  font-weight: $fontWeightTitleReg;
+}
+h3, h4, h5 {
+  font-family: $fontFamilyBody;
+  font-weight: $fontWeightBodyBold;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  transition: background 0.23456789s ease;
+}
