@@ -1,6 +1,7 @@
 <?php
 
 namespace roydejong\dotnet\Generation;
+use roydejong\dotnet\Integration\GeoDecoder;
 use roydejong\dotnet\Integration\Instagram;
 use roydejong\dotnet\Site\SiteConfig;
 
@@ -40,8 +41,13 @@ class HomepageGenerator extends PageGenerator
             $lastCoords = $instagramClient->getLastSeenCoordinates();
 
             if ($lastCoords) {
-                $this->setValue("stalker_location_enabled", true);
-                $this->setValue("stalker_location_coordinates", $lastCoords);
+                $decoded = GeoDecoder::fromAddress($lastCoords);
+
+                if ($decoded) {
+                    $this->setValue("stalker_location_enabled", true);
+                    $this->setValue("stalker_location_coordinates", $lastCoords);
+                    $this->setValue("stalker_location_text", "{$decoded->locality}, {$decoded->country}");
+                }
             }
         }
 
