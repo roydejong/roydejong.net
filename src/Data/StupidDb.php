@@ -97,4 +97,33 @@ class StupidDb
 
         return null;
     }
+
+    /**
+     * Adds or updates a integer value in the database.
+     *
+     * @param string $key
+     * @param int $value
+     */
+    public static function setInt(string $key, int $value): void
+    {
+        self::open();
+        self::$values->$key = $value;
+    }
+
+    /**
+     * Gets a value by its key.
+     *
+     * @param string $key
+     * @return null|mixed
+     */
+    public static function getInt(string $key): ?int
+    {
+        self::open();
+
+        if (isset(self::$values->$key)) {
+            return intval(self::$values->$key);
+        }
+
+        return null;
+    }
 }
