@@ -32,7 +32,7 @@
                             <i class="factoid__icon">🌍</i>
                             <strong class="factoid__label">
                                 Last seen near {{ stalker_location_text }}
-                                <span class="factoid__extra">A rough estimate based on my last Instagram <a href="https://www.instagram.com/ryjng/" target="_blank">photo</a></span>
+                                <span class="factoid__extra">A rough estimate based on my latest <a href="https://www.instagram.com/ryjng/" target="_blank">Instagram photo</a></span>
                             </strong>
                         </div>
                     {% endif %}
@@ -42,7 +42,17 @@
                             <i class="factoid__icon">🔊</i>
                             <strong class="factoid__label">
                                 {{ stalker_music_track.isPlaying ? 'Listening to' : 'Listened to' }} {{ stalker_music_track.name }} by {{ stalker_music_track.artistName }}
-                                <span class="factoid__extra">{{ stalker_music_track.isPlaying ? 'Now playing' : stalker_music_track.date|timeago }}</span>
+                                <span class="factoid__extra">{{ stalker_music_track.isPlaying ? 'Now playing' : stalker_music_track.date|timeago }}, via <a href="https://www.last.fm/user/royjng" target="_blank">Last.fm</a></span>
+                            </strong>
+                        </div>
+                    {% endif %}
+
+                    {% if stalker_game_enabled %}
+                        <div class="factoid factoid--music">
+                            <i class="factoid__icon">🎮</i>
+                            <strong class="factoid__label">
+                                {{ stalker_game_info.playingNow ? 'Now playing' : 'Last played' }} {{ stalker_game_info.name }}
+                                <span class="factoid__extra">{% if stalker_game_info.playingNow %}Now playing on Steam{% else %}Most recently played game on Steam{% endif %}</span>
                             </strong>
                         </div>
                     {% endif %}

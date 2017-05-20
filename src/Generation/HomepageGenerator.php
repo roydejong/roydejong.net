@@ -4,6 +4,7 @@ namespace roydejong\dotnet\Generation;
 use roydejong\dotnet\Integration\GeoDecoder;
 use roydejong\dotnet\Integration\Instagram;
 use roydejong\dotnet\Integration\Lastfm;
+use roydejong\dotnet\Integration\Steam;
 use roydejong\dotnet\Site\SiteConfig;
 
 /**
@@ -61,6 +62,18 @@ class HomepageGenerator extends PageGenerator
             if ($lastTrack) {
                 $this->setValue("stalker_music_enabled", true);
                 $this->setValue("stalker_music_track", $lastTrack);
+            }
+        }
+
+        // Steam integration for last game
+        if ($config->steamEnabled) {
+            $steamClient = new Steam($config);
+
+            $lastGame = $steamClient->getLastPlayedGame();
+
+            if ($lastGame) {
+                $this->setValue("stalker_game_enabled", true);
+                $this->setValue("stalker_game_info", $lastGame);
             }
         }
 

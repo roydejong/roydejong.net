@@ -36,6 +36,10 @@ class SiteConfig
     public $lastfmApiKey;
     public $lastfmUsername;
 
+    public $steamEnabled;
+    public $steamApiKey;
+    public $steamUserId;
+
     /**
      * SiteConfig constructor.
      */

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "59393fea239900b32b4d339f1a5ce286",
+    "content-hash": "78f9d604f38e91e2e246689f4cea982f",
     "packages": [
         {
             "name": "chrismou/lastfm",
@@ -103,6 +103,61 @@
                 "instagram"
             ],
             "time": "2015-11-22 11:16:51"
+        },
+        {
+            "name": "da-mitchell/steam-api",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DaMitchell/steam-api-php.git",
+                "reference": "c004d4eecfeaf85d48a262b820934deebce82678"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DaMitchell/steam-api-php/zipball/c004d4eecfeaf85d48a262b820934deebce82678",
+                "reference": "c004d4eecfeaf85d48a262b820934deebce82678",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.1",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Steam\\": "src/Steam"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Mitchell",
+                    "email": "danmitchellster@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP wrapper for the steam web API",
+            "homepage": "https://github.com/DaMitchell/steam-api-php",
+            "keywords": [
+                "api",
+                "counter strike",
+                "csgo",
+                "dota",
+                "steam"
+            ],
+            "time": "2015-12-28T17:42:46+00:00"
         },
         {
             "name": "enlighten/framework",
@@ -511,7 +566,8 @@
     "stability-flags": {
         "enlighten/framework": 20,
         "cosenary/instagram": 20,
-        "chrismou/lastfm": 20
+        "chrismou/lastfm": 20,
+        "da-mitchell/steam-api": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
