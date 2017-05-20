@@ -31,7 +31,9 @@ class SiteEngine
 
         $renderOutput = null;
 
-        if (!$page->isDynamic() && !$page->needsGeneration()) {
+        $forcingGeneration = (DEBUG_ENABLED && $request->getQueryParam('regen') == 'force');
+
+        if (!$page->isDynamic() && !$page->needsGeneration() && !$forcingGeneration) {
             // Page is static and does not need to be (re) generated, so attempt to read from cache
             if ($page->getRenderedFileExists()) {
                 $renderOutput = $page->renderFromCache();
