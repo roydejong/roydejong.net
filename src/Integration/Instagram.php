@@ -11,12 +11,16 @@ use roydejong\dotnet\Site\SiteConfig;
 class Instagram
 {
     const DB_KEY_TOKEN = "instagram.token";
-    const DB_KEY_USERNAME = "instagram.username";
 
     /**
      * @var \MetzWeb\Instagram\Instagram
      */
     protected $client;
+
+    /**
+     * @var SiteConfig
+     */
+    protected $config;
 
     /**
      * Instagram integration constructor.
@@ -25,6 +29,8 @@ class Instagram
      */
     public function __construct(SiteConfig $config)
     {
+        $this->config = $config;
+
         $this->client = new \MetzWeb\Instagram\Instagram([
             'apiKey' => $config->instagramClientId,
             'apiSecret' => $config->instagramClientSecret,
@@ -62,9 +68,10 @@ class Instagram
 
         $token = $this->client->getOAuthToken($oauthCode);
 
-        if ($token && isset($token->access_token) && isset($token->user) && isset($token->user->username)) {
+        if ($token && isset($token->access_token) && isset($token->user) && isset($token->user->username) &&
+            $token->user->username === $this->config->instagramUsername
+        ) {
             StupidDb::setString(self::DB_KEY_TOKEN, $token->access_token);
-            StupidDb::setString(self::DB_KEY_USERNAME, $token->user->username);
             StupidDb::commit();
             return true;
         }

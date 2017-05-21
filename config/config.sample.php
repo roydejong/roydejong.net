@@ -14,6 +14,7 @@ $config->adminPassword = '';
 $config->instagramEnabled = false;
 $config->instagramClientId = '';
 $config->instagramClientSecret = '';
+$config->instagramUsername = '';
 
 // Lastfm integration
 $config->lastfmEnabled = false
