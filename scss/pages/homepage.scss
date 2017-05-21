@@ -46,6 +46,31 @@
   color: #ddd;
 }
 
+@media all and (max-width: $responsiveStopMobile) {
+  .intro {
+    padding-right: 1.5rem;
+  }
+  .intro__title {
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro__text {
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+
+    a {
+      border-bottom-width: 2px;
+    }
+  }
+  .intro__text--primary {
+    margin-bottom: 2rem;
+  }
+  .intro__text--secondary {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
+}
+
 // --- Stalker mode ---
 .stalker__title {
   margin-bottom: 1.5rem;

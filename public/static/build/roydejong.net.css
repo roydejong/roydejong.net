@@ -69,6 +69,12 @@ a {
   font-size: 1.8rem;
   padding: 1.333rem 2.5rem 1rem 2.5rem; }
 
+@media all and (max-width: 640px) {
+  .button--intro {
+    font-size: 2.2rem;
+    padding: 1rem 1.8rem;
+    border-width: 2px;
+    margin-top: 2.5rem; } }
 .form-control {
   padding: 1.2rem 1rem;
   font-size: 1.6rem;
@@ -91,21 +97,12 @@ a {
 
 .site-card__inner {
   padding: 2.5rem 0; }
-  @media all and (max-width: 640px) {
-    .site-card__inner {
-      padding: 2.5rem 0; } }
-
-.site-card__inner--frontpage {
-  padding: 5rem 0; }
-  @media all and (max-width: 640px) {
-    .site-card__inner--frontpage {
-      padding: 15rem 0; } }
 
 .site-card__inner--intro {
   padding: 15rem 0; }
   @media all and (max-width: 640px) {
     .site-card__inner--intro {
-      padding: 15rem 0; } }
+      padding: 5rem 0; } }
 
 .navi {
   background: #141f29;
@@ -222,6 +219,26 @@ a {
   line-height: 5.2rem;
   color: #ddd; }
 
+@media all and (max-width: 640px) {
+  .intro {
+    padding-right: 1.5rem; }
+
+  .intro__title {
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem; }
+
+  .intro__text {
+    font-size: 2.4rem;
+    line-height: 4.4rem; }
+    .intro__text a {
+      border-bottom-width: 2px; }
+
+  .intro__text--primary {
+    margin-bottom: 2rem; }
+
+  .intro__text--secondary {
+    font-size: 1.6rem;
+    line-height: 3.2rem; } }
 .stalker__title {
   margin-bottom: 1.5rem; }
 
