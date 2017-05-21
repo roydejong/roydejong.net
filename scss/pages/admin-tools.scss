@@ -1,0 +1,23 @@
+.admin-integration {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.admin-integration__text {
+  flex-grow: 1;
+}
+.admin-integration__actions {
+  flex-shrink: 0;
+}
+.admin-integration__title {
+  font-size: 2rem;
+}
+.admin-integration__usage {
+  color: #666;
+  font-size: 1.6rem;
+  margin-top: .5rem;
+}

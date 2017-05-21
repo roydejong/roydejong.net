@@ -1,0 +1,46 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="site-card">
+        <div class="site-card__inner">
+            <div class="container">
+
+                <h1>Integrations</h1>
+                <p class="intro-text">You can reconnect to any external integrations here.</p>
+
+                <div class="admin-integration">
+                    <div class="admin-integration__text">
+                        <h2 class="admin-integration__title">Instagram API</h2>
+                        <p class="admin-integration__usage">Used to retrieve last photo and last location info for the Stalker.</p>
+                    </div>
+                    <div class="admin-integration__actions">
+                        {% if instagram_enabled %}
+                            <a class="button" href="{{ instagram_auth_url }}" target="_self" title="Perform OAuth">
+                                Authorize
+                            </a>
+                        {% else %}
+                            <span>Disabled</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="admin-integration">
+                    <div class="admin-integration__text">
+                        <h2 class="admin-integration__title">Fitbit API</h2>
+                        <p class="admin-integration__usage">Used to retrieve activity, sleep and fitness info for the Stalker.</p>
+                    </div>
+                    <div class="admin-integration__actions">
+                        {% if fitbit_enabled %}
+                            <a class="button" href="{{ fitbit_auth_url }}" target="_self" title="Perform OAuth">
+                                Authorize
+                            </a>
+                        {% else %}
+                            <span>Disabled</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
