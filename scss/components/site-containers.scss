@@ -7,6 +7,10 @@
   padding: 0 2.5rem;
 
   @media all and (max-width: $responsiveStopMobile) {
+    max-width: calc(100% - 4rem);
+    padding: 0 2rem;
+  }
+  @media all and (max-width: $responsiveStopMobile_Small) {
     max-width: calc(100% - 2rem);
     padding: 0 1rem;
   }
