@@ -169,3 +169,10 @@
   height: 4rem;
   width: 4rem;
 }
+
+@media all and (max-width: $responsiveStopMobile) {
+  .social-icons__item, .social-icons__item img {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+}
