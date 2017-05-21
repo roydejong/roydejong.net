@@ -38,6 +38,12 @@ p {
 a {
   transition: background 0.23456789s ease; }
 
+.intro-text {
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 2.0rem;
+  margin-bottom: 4rem; }
+
 .button {
   display: inline-block;
   color: #fff;
@@ -65,6 +71,9 @@ a {
   padding: 0 2.5rem; }
 
 .site-card__inner {
+  padding: 5rem 0; }
+
+.site-card__inner--frontpage {
   padding: 10rem 0; }
 
 .site-card__inner--intro {
@@ -144,6 +153,9 @@ a {
 .nav-links__link:hover, .nav-links__link--active {
   background: rgba(0, 0, 0, 0.333); }
 
+.navi-spacer {
+  height: 9rem; }
+
 .landing {
   color: #fff;
   background: #111 url("/static/images/landing_hero.jpg") no-repeat;
@@ -183,11 +195,6 @@ a {
 
 .stalker__title {
   margin-bottom: 1.5rem; }
-
-.stalker__explain {
-  color: #666;
-  font-size: 2.0rem;
-  margin-bottom: 4rem; }
 
 .factoid {
   display: flex;

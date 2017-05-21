@@ -5,6 +5,7 @@ use Enlighten\Http\Request;
 
 use Enlighten\Http\Response;
 use Enlighten\Http\ResponseCode;
+use roydejong\dotnet\Generation\AdminToolsGenerator;
 use roydejong\dotnet\Generation\HomepageGenerator;
 use roydejong\dotnet\Integration\Fitbit;
 use roydejong\dotnet\Integration\Instagram;
@@ -32,6 +33,11 @@ $app = new Enlighten();
 // Route: Homepage
 $app->get('/', function (Request $request): Response {
     return SiteEngine::fire(new HomepageGenerator(), $request);
+});
+
+// Route: Admin tools
+$app->get('/admin', function (Request $request): Response {
+    return SiteEngine::fire(new AdminToolsGenerator(), $request);
 });
 
 // Route: Callback for Instagram OAuth
