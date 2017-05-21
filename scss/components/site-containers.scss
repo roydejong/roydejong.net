@@ -1,7 +1,8 @@
 // --- Container ---
 .container {
-  max-width: 1240px;
-  width: auto;
+  width: 1240px;
+  max-width: 100%;
+  max-width: calc(100% - 5rem);
   margin: 0 auto;
   padding: 0 2.5rem;
 }
