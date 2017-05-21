@@ -3,6 +3,7 @@
   color: #fff;
   background: #111 url('/static/images/landing_hero.jpg') no-repeat;
   background-size: cover;
+  margin-bottom: 1rem;
 }
 .landing__overlay {
   background: rgba(0, 0, 0, 0.75);
@@ -76,7 +77,8 @@
 .factoid__label {
   font-weight: $fontWeightBodyBold;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 .factoid__extra {
   color: #666;
@@ -84,4 +86,5 @@
   display: block;
   font-size: 1.6rem;
   margin-top: .5rem;
+  max-width: 100%;
 }
