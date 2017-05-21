@@ -27,6 +27,7 @@ class SiteConfig
     }
 
     public $siteUrl;
+    public $adminPassword;
 
     public $instagramEnabled;
     public $instagramClientId;

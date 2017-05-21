@@ -1,0 +1,21 @@
+{% set title = "Admin login" %}
+
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="site-card">
+        <div class="site-card__inner">
+            <div class="container">
+
+                <h1>Admin page</h1>
+                <p class="intro-text">You're going to need a password to get in. Not that there's anything exciting past here.</p>
+
+                <form method="post" action="/admin">
+                    <input type="password" class="form-control" name="password" id="password" />
+                    <button type="submit" class="button button--submit">Continue</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

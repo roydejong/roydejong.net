@@ -36,7 +36,7 @@ $app->get('/', function (Request $request): Response {
 });
 
 // Route: Admin tools
-$app->get('/admin', function (Request $request): Response {
+$app->route('/admin', function (Request $request): Response {
     return SiteEngine::fire(new AdminToolsGenerator(), $request);
 });
 

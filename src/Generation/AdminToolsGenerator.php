@@ -15,11 +15,38 @@ use roydejong\dotnet\Site\SiteConfig;
 class AdminToolsGenerator extends PageGenerator
 {
     /**
+     * The laziest admin auth scheme ever.
+     * Handles admin session management, handles password submissions and verifies the password.
+     *
+     * @return bool
+     */
+    protected function isAuthenticated(): bool
+    {
+        $cfg = SiteConfig::instance();
+
+        if (!session_status() === PHP_SESSION_ACTIVE) {
+            session_name('admin');
+            session_start();
+        }
+
+        if (!$cfg->adminPassword) {
+            // Not set in config
+            return false;
+        }
+
+        if ($this->request->getPost('password')) {
+            $_SESSION['admin_pass'] = $this->request->getPost('password');
+        }
+
+        return $cfg->adminPassword === $_SESSION['admin_pass'];
+    }
+
+    /**
      * @@inheritdoc
      */
     public function getTemplateName(): string
     {
-        return "admin_tools.twig";
+        return $this->isAuthenticated() ? "admin_tools.twig" : "admin_login.twig";
     }
 
     /**
@@ -27,8 +54,15 @@ class AdminToolsGenerator extends PageGenerator
      */
     public function needsGeneration(): bool
     {
-        // This page does not normally change unless config changes
-        return false;
+        return true;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function isDynamic(): bool
+    {
+        return true;
     }
 
     /**
@@ -38,18 +72,20 @@ class AdminToolsGenerator extends PageGenerator
     {
         $config = SiteConfig::instance();
 
-        if ($config->instagramEnabled) {
-            $instagramClient = new Instagram($config);
+        if ($this->isAuthenticated()) {
+            if ($config->instagramEnabled) {
+                $instagramClient = new Instagram($config);
 
-            $this->setValue("instagram_enabled", true);
-            $this->setValue("instagram_auth_url", $instagramClient->getAuthUrl());
-        }
+                $this->setValue("instagram_enabled", true);
+                $this->setValue("instagram_auth_url", $instagramClient->getAuthUrl());
+            }
 
-        if ($config->fitbitEnabled) {
-            $fitbitClient = new Fitbit($config);
+            if ($config->fitbitEnabled) {
+                $fitbitClient = new Fitbit($config);
 
-            $this->setValue("fitbit_enabled", true);
-            $this->setValue("fitbit_auth_url", $fitbitClient->getAuthUrl());
+                $this->setValue("fitbit_enabled", true);
+                $this->setValue("fitbit_auth_url", $fitbitClient->getAuthUrl());
+            }
         }
 
         return parent::generate();
