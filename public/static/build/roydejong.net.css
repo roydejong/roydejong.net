@@ -62,7 +62,7 @@ a {
     font-size: 2.4rem; }
 
   h2 {
-    font-size: 2.0rem; }
+    font-size: 2.2rem; }
 
   .intro-text {
     font-size: 1.5rem;
@@ -116,7 +116,7 @@ a {
   @media all and (max-width: 640px) {
     .container {
       max-width: calc(100% - 4rem);
-      padding: 0 1.5rem; } }
+      padding: 0 2rem; } }
   @media all and (max-width: 320px) {
     .container {
       max-width: calc(100% - 2rem);
@@ -214,6 +214,16 @@ a {
 .navi-spacer {
   height: 9rem; }
 
+@media all and (max-width: 640px) {
+  .navi__content {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0; }
+
+  .nav-links {
+    display: none; } }
 .landing {
   color: #fff;
   background: #111 url("/static/images/landing_hero.jpg") no-repeat;

@@ -89,3 +89,17 @@ $zIndexNavContent: 502;
 .navi-spacer {
   height: 9rem;
 }
+
+// --- Responsive nav ---
+@media all and (max-width: $responsiveStopMobile) {
+  .navi__content {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .nav-links {
+    display: none;
+  }
+}
