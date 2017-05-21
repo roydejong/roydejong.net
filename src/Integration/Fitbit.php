@@ -108,7 +108,7 @@ class Fitbit
 
         if ($tsNow >= $expiryTs) {
             // Expired, try to refresh
-            $refreshToken = StupidDb::getString(self::DB_KEY_TOKEN_EXPIRES);
+            $refreshToken = StupidDb::getString(self::DB_KEY_TOKEN_REFRESH);
 
             $newAccessToken = $this->client->getAccessToken('refresh_token', [
                 'refresh_token' => $refreshToken
