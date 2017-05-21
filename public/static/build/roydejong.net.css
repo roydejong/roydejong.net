@@ -348,6 +348,18 @@ a {
 
   .factoid__extra {
     font-size: 1.4rem; } }
+.social-icons {
+  margin-top: 3.5rem; }
+
+.social-icons__item {
+  margin-right: 2rem;
+  text-decoration: none;
+  display: inline-block; }
+
+.social-icons__item, .social-icons__item img {
+  height: 4rem;
+  width: 4rem; }
+
 .admin-integration {
   border: 1px solid #ddd;
   padding: 2rem;

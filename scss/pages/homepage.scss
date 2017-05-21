@@ -155,3 +155,17 @@
     font-size: 1.4rem;
   }
 }
+
+// --- Social icons ---
+.social-icons {
+  margin-top: 3.5rem;
+}
+.social-icons__item {
+  margin-right: 2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+.social-icons__item, .social-icons__item img {
+  height: 4rem;
+  width: 4rem;
+}
