@@ -19,6 +19,9 @@
 .site-card__inner--intro {
   padding: 15rem 0;
 
+  @media all and (max-width: $responsiveStopTablet) {
+    padding: 7.5rem 0;
+  }
   @media all and (max-width: $responsiveStopMobile) {
     padding: 5rem 0;
   }

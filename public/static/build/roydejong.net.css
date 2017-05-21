@@ -100,6 +100,9 @@ a {
 
 .site-card__inner--intro {
   padding: 15rem 0; }
+  @media all and (max-width: 1024px) {
+    .site-card__inner--intro {
+      padding: 7.5rem 0; } }
   @media all and (max-width: 640px) {
     .site-card__inner--intro {
       padding: 5rem 0; } }
@@ -219,6 +222,21 @@ a {
   line-height: 5.2rem;
   color: #ddd; }
 
+@media all and (max-width: 1024px) {
+  .intro__title {
+    font-size: 4.5rem;
+    margin-bottom: 3rem; }
+
+  .intro__text {
+    font-size: 3.2rem;
+    line-height: 5.2rem; }
+
+  .intro__text--primary {
+    margin-bottom: 3rem; }
+
+  .intro__text--secondary {
+    font-size: 2.4rem;
+    line-height: 4.4rem; } }
 @media all and (max-width: 640px) {
   .intro {
     padding-right: 1.5rem; }

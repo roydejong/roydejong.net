@@ -46,6 +46,31 @@
   color: #ddd;
 }
 
+@media all and (max-width: $responsiveStopTablet) {
+  .intro {
+    //padding-right: 1.5rem;
+  }
+  .intro__title {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+  }
+  .intro__text {
+    font-size: 3.2rem;
+    line-height: 5.2rem;
+
+    //a {
+    //  border-bottom-width: 2px;
+    //}
+  }
+  .intro__text--primary {
+    margin-bottom: 3rem;
+  }
+  .intro__text--secondary {
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+  }
+}
+
 @media all and (max-width: $responsiveStopMobile) {
   .intro {
     padding-right: 1.5rem;
