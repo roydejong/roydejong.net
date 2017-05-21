@@ -40,6 +40,11 @@ class SiteConfig
     public $steamApiKey;
     public $steamUserId;
 
+    public $fitbitEnabled;
+    public $fitbitClientId;
+    public $fitbitClientSecret;
+    public $fitbitUserId;
+
     /**
      * SiteConfig constructor.
      */

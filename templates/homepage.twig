@@ -57,6 +57,18 @@
                         </div>
                     {% endif %}
 
+                    {% if stalker_sleep_enabled %}
+                        <div class="factoid factoid--music">
+                            <i class="factoid__icon">🛌</i>
+                            <strong class="factoid__label">
+                                {% set sleepHours = (stalker_sleep_data.minutesAsleep / 60)|round(0, 'floor')  %}
+                                {% set sleepMinutes = (stalker_sleep_data.minutesAsleep - (sleepHours  * 60)) %}
+                                I slept {{ sleepHours }} hours, {{ sleepMinutes }} minutes last night
+                                <span class="factoid__extra">Fell asleep {{ stalker_sleep_data.startDateTime|timeago }}, via Fitbit</span>
+                            </strong>
+                        </div>
+                    {% endif %}
+
                 </div>
             </div>
         </div>

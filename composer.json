@@ -7,7 +7,8 @@
         "enlighten/framework": "dev-master",
         "cosenary/instagram": "^2.4@dev",
         "chrismou/lastfm": "^1.0@dev",
-        "da-mitchell/steam-api": "^2.0@dev"
+        "da-mitchell/steam-api": "^2.0@dev",
+        "djchen/oauth2-fitbit": "dev-master"
     },
     "license": "MIT",
     "authors": [

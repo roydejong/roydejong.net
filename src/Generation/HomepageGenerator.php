@@ -1,6 +1,8 @@
 <?php
 
 namespace roydejong\dotnet\Generation;
+
+use roydejong\dotnet\Integration\Fitbit;
 use roydejong\dotnet\Integration\GeoDecoder;
 use roydejong\dotnet\Integration\Instagram;
 use roydejong\dotnet\Integration\Lastfm;
@@ -74,6 +76,18 @@ class HomepageGenerator extends PageGenerator
             if ($lastGame) {
                 $this->setValue("stalker_game_enabled", true);
                 $this->setValue("stalker_game_info", $lastGame);
+            }
+        }
+
+        // Fitbit integration for sleep/activity stuff
+        if ($config->fitbitEnabled) {
+            $fitbitClient = new Fitbit($config);
+
+            $lastSleep = $fitbitClient->getLastSleep();
+
+            if ($lastSleep) {
+                $this->setValue("stalker_sleep_enabled", true);
+                $this->setValue("stalker_sleep_data", $lastSleep);
             }
         }
 
