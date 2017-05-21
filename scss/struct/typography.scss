@@ -31,6 +31,9 @@ h3, h4, h5 {
 h1 {
   font-size: 3.2rem;
 }
+h2 {
+  font-size: 2.8rem;
+}
 p {
   font-size: 1.8rem;
 }
@@ -44,4 +47,32 @@ a {
   color: #666;
   font-size: 2.0rem;
   margin-bottom: 4rem;
+}
+
+@media all and (max-width: $responsiveStopTablet) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .intro-text {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (max-width: $responsiveStopMobile) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  .intro-text {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
 }
