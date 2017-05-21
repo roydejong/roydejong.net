@@ -51,6 +51,7 @@ a {
   padding: 1rem;
   text-align: center;
   border-radius: 0;
+  border: 0;
   cursor: pointer;
   text-decoration: none; }
 
@@ -63,6 +64,19 @@ a {
   .button--intro:hover {
     background: #fff;
     color: #000; }
+
+.button--submit {
+  font-size: 1.8rem;
+  padding: 1.333rem 2.5rem 1rem 2.5rem; }
+
+.form-control {
+  padding: 1.2rem 1rem;
+  font-size: 1.6rem;
+  display: block;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 1.5rem; }
 
 .container {
   max-width: 1240px;
