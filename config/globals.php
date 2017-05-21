@@ -8,7 +8,7 @@ define('PATH_TEMPLATES', PATH_PROJECT . "/templates");
 
 function getEnableDebugMode(): bool
 {
-    return ($_SERVER['SERVER_NAME'] === 'dev.roydejong.net');
+    return (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === 'dev.roydejong.net');
 }
 
 define('DEBUG_ENABLED', getEnableDebugMode());
