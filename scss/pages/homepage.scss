@@ -3,7 +3,6 @@
   color: #fff;
   background: #111 url('/static/images/landing_hero.jpg') no-repeat;
   background-size: cover;
-  margin-bottom: 1rem;
 }
 .landing__overlay {
   background: rgba(0, 0, 0, 0.75);
@@ -67,7 +66,7 @@
   }
   .intro__text--secondary {
     font-size: 2.4rem;
-    line-height: 4.4rem;
+    line-height: 3.4rem;
   }
 }
 
@@ -81,7 +80,7 @@
   }
   .intro__text {
     font-size: 2.4rem;
-    line-height: 4.4rem;
+    line-height: 3.4rem;
 
     a {
       border-bottom-width: 2px;
@@ -92,7 +91,7 @@
   }
   .intro__text--secondary {
     font-size: 1.6rem;
-    line-height: 3.2rem;
+    line-height: 2.6rem;
   }
 }
 
@@ -105,12 +104,16 @@
   display: flex;
   width: 100%;
   align-items: center;
-  margin: 3rem 0;
+  margin: 2rem 0;
   font-size: 1.8rem;
   background: #fbfbfb;
   padding: 2rem 1rem;
   border-radius: 4px;
   border: 1px solid #ddd;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .factoid a {
   color: inherit;
@@ -146,6 +149,7 @@
   .factoid {
     margin: 2rem 0;
     font-size: 1.6rem;
+    padding: 1.5rem .75rem;
   }
   .factoid__extra {
     font-size: 1.4rem;

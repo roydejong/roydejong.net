@@ -14,7 +14,11 @@
 
 // --- "Cards" ---
 .site-card__inner {
-  padding: 2.5rem 0;
+  padding: 5rem 0;
+
+  @media all and (max-width: $responsiveStopTablet) {
+    padding: 3.5rem 0;
+  }
 }
 .site-card__inner--intro {
   padding: 15rem 0;
