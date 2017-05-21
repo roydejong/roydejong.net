@@ -74,7 +74,7 @@ class Steam
             return null;
         }
 
-        if ($playerInfo['gameextrainfo']) {
+        if (isset($playerInfo['gameextrainfo']) && $playerInfo['gameextrainfo']) {
             $game = new SteamGame();
             $game->playingNow = true;
             $game->name = $playerInfo['gameextrainfo'];
