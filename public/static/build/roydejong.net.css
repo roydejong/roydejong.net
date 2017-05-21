@@ -319,6 +319,16 @@ a {
   margin-top: .5rem;
   max-width: 100%; }
 
+@media all and (max-width: 640px) {
+  .stalker__title {
+    margin-bottom: 1rem; }
+
+  .factoid {
+    margin: 2rem 0;
+    font-size: 1.6rem; }
+
+  .factoid__extra {
+    font-size: 1.4rem; } }
 .admin-integration {
   border: 1px solid #ddd;
   padding: 2rem;

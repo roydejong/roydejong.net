@@ -101,7 +101,6 @@
   margin-bottom: 1.5rem;
 }
 
-// --- Factoids ---
 .factoid {
   display: flex;
   width: 100%;
@@ -137,4 +136,18 @@
   font-size: 1.6rem;
   margin-top: .5rem;
   max-width: 100%;
+}
+
+@media all and (max-width: $responsiveStopMobile) {
+  .stalker__title {
+    margin-bottom: 1rem;
+  }
+
+  .factoid {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+  }
+  .factoid__extra {
+    font-size: 1.4rem;
+  }
 }
