@@ -17,4 +17,15 @@ $config->lastfmEnabled = false
 $config->lastfmApiKey = '';
 $config->lastfmUsername = '';
 
+// Steam integration
+$config->steamEnabled = false;
+$config->steamApiKey = '';
+$config->steamUserId = '';
+
+// Fitbit integration
+$config->fitbitEnabled = false;
+$config->fitbitClientId = '';
+$config->fitbitClientSecret = '';
+$config->fitbitUserId = '';
+
 
